@@ -7,7 +7,6 @@ const Calculator = () => {
 
   const handleButtonClick = (value) => {
     if (value === '=') {
-
       try {
         setResult(eval(input).toString());
       } catch (error) {
@@ -17,27 +16,29 @@ const Calculator = () => {
       setInput('');
       setResult('');
     } else {
-
       setInput(input + value);
     }
   };
 
+  const handleSurnameButtonClick = () => {
+    setInput('Santiago');
+  };
+
   return (
-    <div class="container">
-    <div className = "H1"><h1>Santiago, Reanne Allen G. - IT3A</h1>
-    <div className="calculator">
-      <div className="display">
-        <input type="text" value={input} readOnly />
-        <span className="result">{result}</span>
-      </div>
-      <div className="buttons">
-        <div className="row1">
-          <button onClick={() => handleButtonClick('7')} className="button">7</button>
-          <button onClick={() => handleButtonClick('4')} className="button">4</button>
-          <button onClick={() => handleButtonClick('1')} className="button">1</button>
-          <button onClick={() => handleButtonClick('C')} className="button clear">C</button>
+      <div className="calculator">
+      <div className="H1"><h1>Santiago, Reanne Allen G. - IT3A</h1>
+        <div className="display">
+          <input type="text" value={input} readOnly />
+          <span className="result">{result}</span>
         </div>
-        <div className="row2">
+        <div className="buttons">
+          <div className="row1">
+            <button onClick={() => handleButtonClick('7')} className="button">7</button>
+            <button onClick={() => handleButtonClick('4')} className="button">4</button>
+            <button onClick={() => handleButtonClick('1')} className="button">1</button>
+            <button onClick={() => handleButtonClick('C')} className="button clear">C</button>
+          </div>
+          <div className="row2">
           <button onClick={() => handleButtonClick('8')} className="button">8</button>
           <button onClick={() => handleButtonClick('5')} className="button">5</button>
           <button onClick={() => handleButtonClick('2')} className="button">2</button>
@@ -49,18 +50,17 @@ const Calculator = () => {
           <button onClick={() => handleButtonClick('3')} className="button">3</button>
           <button onClick={() => handleButtonClick('=')} className="button equal">=</button>
         </div>
-        <div className="row4">
-          <button onClick={() => handleButtonClick('+')} className="button operator">+</button>
-          <button onClick={() => handleButtonClick('-')} className="button operator">-</button>
-          <button onClick={() => handleButtonClick('*')} className="button operator">*</button>
-          <button onClick={() => handleButtonClick('÷')} className="button operator">÷</button>
+          <div className="row4">
+            <button onClick={() => handleButtonClick('+')} className="button operator">+</button>
+            <button onClick={() => handleButtonClick('-')} className="button operator">-</button>
+            <button onClick={() => handleButtonClick('*')} className="button operator">*</button>
+            <button onClick={() => handleButtonClick('÷')} className="button operator">÷</button>
+          </div>
         </div>
       </div>
-    </div>
-    <div className= "surname">
-      <button onClick={() =>handleButtonClick('Reanne Santiago')}>Santiago</button>
+      <div className="surname">
+        <button onClick={handleSurnameButtonClick}>Santaigo</button>
       </div>
-    </div>
     </div>
   );
 };
