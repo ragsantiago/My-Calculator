@@ -59,7 +59,7 @@ const Calculator = () => {
         </div>
       </div>
       <div className="surname">
-        <button onClick={handleSurnameButtonClick}>Santaigo</button>
+        <button onClick={handleSurnameButtonClick}>Santiago</button>
       </div>
     </div>
   );
